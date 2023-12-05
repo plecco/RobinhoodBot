@@ -15,13 +15,14 @@ This project supports Python 3.7+
 To Install:
 
 ```bash
-git clone https://github.com/2018kguo/RobinhoodBot.git
+git clone https://github.com/txavier/RobinhoodBot.git
 cd RobinhoodBot/
 pip install -r requirements.txt
-cp config.py.sample config.py # add auth info after copying
+cp config.py.sample config.py # add auth info and watchlist name to monitor after copying
 ```
 
 To Run:
+In RobinHood create a watchlist named "Exclusion".  This will be the watchlist that you will use to tell the bot to ignore the stock tickers contained within.
 
 ```python
 cd RobinboodBot/robinhoodbot (If outside of root directory)
@@ -34,3 +35,10 @@ To loop: 1 once an hour
 cd RobinboodBot/robinhoodbot (If outside of root directory)
 ./run.sh # uses bash
 ```
+
+# Changes to robin_stocks library
+ - Added @cache to def get_name_by_symbol(symbol):
+ - Added @cache to def get_name_by_url(url):
+ - Added @cache to def get_symbol_by_url(url):
+ - Added None Parameter to order
+Afterwards, be sure to run /> pip install . 

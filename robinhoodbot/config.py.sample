@@ -1,7 +1,44 @@
 #Enter your robinhood username and password here, then save this file in the same directory as a regular python file
 rh_password="Your Password"
 rh_username="Username"
-# change to false to run frfr
+# If you dont have a premium account then setting this to false will disable buying during the offhours.
+premium_account=False
+# You need to retrieve the authenticator token from the robinhood app when you enable 2FA with
+# an authenticator app, select "manual" as the authenticator app and put the resulting code here.
+# https://robinhood.com/us/en/support/articles/twofactor-authentication/
+# RH_DEVICE_TOKEN explanation: https://github.com/jmfernandes/robin_stocks/issues/296#issuecomment-872740673
+RH_DEVICE_TOKEN="Your authenticator token"
+# change to false to run in debug mode.
 debug=True
 # set to show plot; if set to false plot will not show
-plot=True
+# beware, if plot is set to true it will stop execution
+# of this program until the plot diagram window is closed.
+plot=False
+verbose=True
+rh_email="email@emailprovider.com"
+rh_mail_password="my password"
+rh_phone="7777777777"
+rh_company_url="phone company email address url i.e. for Verizon this will be 'vtext.com'"
+trade_history_file_name="tradehistory-real.txt"
+watch_list_name="My First Watchlist"
+# caution here, if the market tag returns too much data this
+# will crash.
+market_tag_for_report="top-movers,most-popular-under-25,blank-check,100-most-popular,technology,etf,media,telecommunications"
+market_report_auto_invest=True
+# If you decide to not allow specific symbols from being automatically added to the watchlist then set the below value use_exclusion_watchlist
+# to true and include the name of your exclusion watchlist here auto_invest_exclusion_watchlist.
+use_exclusion_watchlist=True
+auto_invest_exclusion_watchlist="Exclusion"
+use_price_cap=True
+price_cap=21
+# The minimum amount of volume of shares a stock needs to be considered.
+min_volume=1000000
+# The minimum amount of market cap a stock needs to be considered.
+min_market_cap=400000
+# Reset the watchlist every week.  Useful for keeping the number of api requests low.
+reset_watchlist=True
+# The limit of purchase per stock as represented by the percentage of the equity.
+# i.e. If you have invested $7,000 and the purchase_limit_percentage is 10 persent
+# then no one stock purchase can exceed $700.
+use_purchase_limit_percentage=True
+purchase_limit_percentage=10
