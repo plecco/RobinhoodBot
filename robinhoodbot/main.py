@@ -1128,7 +1128,7 @@ def scan_stocks():
         if(len(sells) > 0):
             file_name = trade_history_file_name
             if debug:
-                file_name = "robinhoodbot/tradehistory-debug.txt"
+                file_name = trade_history_debug_file_name
             update_trade_history(sells, holdings_data, file_name)
 
         print("----- Scanning metric updates and stocks to add to watch list -----\n")

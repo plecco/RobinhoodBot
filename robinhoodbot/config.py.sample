@@ -7,7 +7,7 @@ premium_account=False
 # an authenticator app, select "manual" as the authenticator app and put the resulting code here.
 # https://robinhood.com/us/en/support/articles/twofactor-authentication/
 # RH_DEVICE_TOKEN explanation: https://github.com/jmfernandes/robin_stocks/issues/296#issuecomment-872740673
-RH_DEVICE_TOKEN="Your authenticator token"
+RH_DEVICE_TOKEN="634467"
 # change to false to run in debug mode.
 debug=True
 # set to show plot; if set to false plot will not show
@@ -19,7 +19,8 @@ rh_email="email@emailprovider.com"
 rh_mail_password="my password"
 rh_phone="7777777777"
 rh_company_url="phone company email address url i.e. for Verizon this will be 'vtext.com'"
-trade_history_file_name="tradehistory-real.txt"
+trade_history_debug_file_name="tradehistory-debug.txt"
+trade_history_file_name="tradehistory.txt"
 watch_list_name="My First Watchlist"
 # caution here, if the market tag returns too much data this
 # will crash.
